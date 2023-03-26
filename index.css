@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color:#131313;
+    color: white;
+}
+
+/* header heading section */
+#heading {
+    margin-top: 100px;
+}
+
+
+/* header navbar */
+#nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.navbar{
+    position: fixed;
+    height: 70px;
+    z-index: 1000;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 0px 35px;
+    justify-content: space-between;
+}
+.navbarLeft{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navbarRight{
+    cursor: pointer;
+}
+.favrouite.hide{
+visibility: hidden;
+opacity: 0;
+transition: 0.6s all ease;
+right: -80%;
+}
+.favrouite.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.6s all ease;
+    right: 0;
+    z-index: 1000;
+    }
+.favrouite{
+    z-index: 1000;
+    top: 0;
+    width: 400px;
+    position: fixed;
+    background-color: #0f0c0c;
+    height: 100vh;
+    right: 0;
+}
+.favrouiteTop{
+    position: sticky;
+    width: 100%;
+    height: 70px;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.favrouiteTop span:nth-of-type(1){
+    text-transform: capitalize;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.favrouiteTop span:nth-of-type(2){
+    cursor: pointer;
+}
+.favrouiteCards::-webkit-scrollbar{
+    width: 0px;
+}
+.favrouiteCards{
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
+    gap: 30px;
+    z-index: 1000;
+}
+.favrouiteCards .favrouiteCard{
+    width:70%;
+    height: 300px;
+    box-shadow: 2px 2px 2px 2px rgba(103, 103, 103, 0.333);
+    margin: auto;
+    background-color: rgb(20, 20, 58);
+}
+.favrouiteCard img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.favrouiteCard .content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.favrouite-icons{
+    display: flex;
+    width:100%;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+/* header search bar section */
+#search-bar {
+    max-width: 600px;
+}
+
+#search-bar input {
+    height: 50px;
+    border-radius: 20px;
+}
+
+
+
+.meal{
+    cursor: pointer;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.meal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.meal>.meal-info{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s all ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: -80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    background-color:rgba(4, 4, 19, 0.32);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.meal:hover .meal-info{
+    visibility: visible;
+    bottom: 0;
+    opacity: 1;
+    transition: 0.4s all ease;
+}
+.meal-icons{
+    background-color:rgba(104, 18, 35, 0.495);
+    bottom: 0px;
+    position: absolute;
+    padding: 15px 30px;
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+}
+ .meal-icon{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bebebe;
+    color: black;
+}
+.meal-icon:hover{
+    background-color:crimson;
+    color: #fff;
+}
+/* meal details container */
+
+.meal-details{
+    display: flex;
+    width:80%;
+    margin:0px auto 100px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 50px;
+    align-items: center;
+    gap: 30px;
+    /* background-color: red; */
+}
+.meal-details-top{
+    flex: 1;
+    display: flex;
+    color: black;
+    flex-direction: column;
+}
+
+.meal-details-top .details{
+    margin-top: 15px;
+}
+.meal-details-top img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.meal-details-bottom{
+    flex:1;
+    border-radius: 20px;
+    color: black;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+}
+.instruction{
+    
+}
+.video a{
+    background-color: crimson;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+/* favourites offcanvus */
